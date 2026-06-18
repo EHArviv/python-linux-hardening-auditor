@@ -9,6 +9,7 @@ reports/*.csv
 reports/*.txt
 reports/*.json
 reports/*.ndjson
+reports/*.html
 
 .DS_Store
 Thumbs.db
