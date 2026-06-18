@@ -1,0 +1,65 @@
+Linux Security Hardening Audit Summary
+-------------------------------------
+
+Risk Summary
+------------
+Overall risk score: 17
+Overall risk level: Medium
+
+Check Summary
+-------------
+Total checks: 7
+PASS: 2
+FAIL: 2
+INFO: 2
+SKIPPED: 1
+
+Severity Summary
+----------------
+High: 1
+Medium: 2
+Low: 2
+Info: 2
+
+Detailed Checks
+---------------
+
+Check: Operating System
+Category: System Information
+Status: INFO
+Severity: Info
+Details:
+Linux 6.5.0-generic (x86_64) on host ubuntu-lab
+Recommendation: Use a supported and updated operating system.
+
+------------------------------------------------------------
+
+Check: SSH Root Login
+Category: SSH Hardening
+Status: FAIL
+Severity: High
+Details:
+Root login over SSH may not be disabled.
+Recommendation: Set 'PermitRootLogin no' in /etc/ssh/sshd_config.
+
+------------------------------------------------------------
+
+Check: SSH Password Authentication
+Category: SSH Hardening
+Status: FAIL
+Severity: Medium
+Details:
+SSH password authentication may still be enabled.
+Recommendation: Use SSH keys and set 'PasswordAuthentication no'.
+
+------------------------------------------------------------
+
+Check: Firewall Status
+Category: Network Security
+Status: PASS
+Severity: Low
+Details:
+UFW firewall is active.
+Recommendation: Keep firewall rules minimal and documented.
+
+------------------------------------------------------------

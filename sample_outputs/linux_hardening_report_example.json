@@ -1,0 +1,60 @@
+{
+  "tool_name": "Python Linux Hardening Auditor",
+  "report_type": "linux_security_hardening_audit",
+  "generated_at": "2026-06-18T13:00:00+00:00",
+  "host": "ubuntu-lab",
+  "platform": {
+    "system": "Linux",
+    "release": "6.5.0-generic",
+    "machine": "x86_64"
+  },
+  "risk": {
+    "score": 17,
+    "level": "Medium"
+  },
+  "summary": {
+    "total_checks": 7,
+    "pass": 2,
+    "fail": 2,
+    "info": 2,
+    "skipped": 1,
+    "high": 1,
+    "medium": 2,
+    "low": 2,
+    "info_severity": 2
+  },
+  "checks": [
+    {
+      "name": "Operating System",
+      "category": "System Information",
+      "status": "INFO",
+      "severity": "Info",
+      "details": "Linux 6.5.0-generic (x86_64) on host ubuntu-lab",
+      "recommendation": "Use a supported and updated operating system."
+    },
+    {
+      "name": "SSH Root Login",
+      "category": "SSH Hardening",
+      "status": "FAIL",
+      "severity": "High",
+      "details": "Root login over SSH may not be disabled.",
+      "recommendation": "Set 'PermitRootLogin no' in /etc/ssh/sshd_config."
+    },
+    {
+      "name": "SSH Password Authentication",
+      "category": "SSH Hardening",
+      "status": "FAIL",
+      "severity": "Medium",
+      "details": "SSH password authentication may still be enabled.",
+      "recommendation": "Use SSH keys and set 'PasswordAuthentication no'."
+    },
+    {
+      "name": "Firewall Status",
+      "category": "Network Security",
+      "status": "PASS",
+      "severity": "Low",
+      "details": "UFW firewall is active.",
+      "recommendation": "Keep firewall rules minimal and documented."
+    }
+  ]
+}

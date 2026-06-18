@@ -1,0 +1,29 @@
+[
+  {
+    "id": "FINDING-001",
+    "name": "SSH Root Login",
+    "category": "SSH Hardening",
+    "severity": "High",
+    "status": "FAIL",
+    "details": "Root login over SSH may not be disabled.",
+    "recommendation": "Set 'PermitRootLogin no' in /etc/ssh/sshd_config."
+  },
+  {
+    "id": "FINDING-002",
+    "name": "SSH Password Authentication",
+    "category": "SSH Hardening",
+    "severity": "Medium",
+    "status": "FAIL",
+    "details": "SSH password authentication may still be enabled.",
+    "recommendation": "Use SSH keys and set 'PasswordAuthentication no'."
+  },
+  {
+    "id": "FINDING-003",
+    "name": "Sudo Users",
+    "category": "User Privileges",
+    "severity": "Medium",
+    "status": "INFO",
+    "details": "sudo:x:27:demo-admin",
+    "recommendation": "Ensure only approved administrators have sudo privileges."
+  }
+]
